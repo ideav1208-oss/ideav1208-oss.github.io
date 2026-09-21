@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마주놀자</title>
+<meta name="description" content="마주놀자 — 보드게임을 만듭니다.">
+<style>
+  :root {
+    --bg: #0e1626;
+    --ink: #f2ece1;
+    --dim: #9aa3b2;
+    --gold: #c9a227;
+    --line: #1d2940;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 44rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+  .rule { height: 1px; background: var(--gold); opacity: .5; margin: 2rem 0; }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
+    letter-spacing: .12em;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .tag { margin: .75rem 0 0; color: var(--dim); letter-spacing: .04em; }
+  h2 {
+    margin: 0 0 .5rem;
+    font-size: .8rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 600;
+  }
+  p { margin: 0 0 1rem; }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--dim);
+    font-size: .85rem;
+  }
+  a { color: var(--gold); }
+</style>
+</head>
+<body>
+  <main>
+    <h1>마주놀자</h1>
+    <p class="tag">마주 앉아 노는 보드게임을 만듭니다.</p>
+    <div class="rule"></div>
+    <h2>문의</h2>
+    <p><a href="mailto:ideav1208@gmail.com">ideav1208@gmail.com</a></p>
+  </main>
+  <footer>© 2026 마주놀자</footer>
+</body>
+</html>
