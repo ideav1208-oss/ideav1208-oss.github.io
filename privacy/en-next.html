@@ -21,7 +21,8 @@ prevails</strong>. <a href="ko-next.html">Read the Korean version</a>.</p>
 the <a href="en.html">current version 1.0</a> applies.</p>
 <p><strong>What changes</strong> — paid items and advertising are being introduced. We will process
 purchase records and an advertising identifier, and linking an external account (such as Google)
-becomes available. Everything that changed is listed in <a href="#changes">section 14</a>.</p>
+becomes available. A <strong>friends feature</strong> also arrives, so friendships and room invites
+are stored. Everything that changed is listed in <a href="#changes">section 14</a>.</p>
 </div>
 
 <div class="note">
@@ -52,6 +53,7 @@ address.</p>
 <tr><td>Progress</td><td>Experience, games, wins, streaks, achievement progress, owned items</td></tr>
 <tr><td><strong>Purchases</strong></td><td>If you buy something: store, product identifier, transaction identifier, amount paid, verification time, refund time</td></tr>
 <tr><td>Safety</td><td>Reports (reporter, target, reason), block lists</td></tr>
+<tr><td><strong>Friends</strong></td><td>Friendships, friend requests you sent, room invites you received (sender, room code)</td></tr>
 <tr><td>Session</td><td>Authentication tokens and their expiry</td></tr>
 </table>
 </div>
@@ -61,6 +63,10 @@ need to join the accounts is the opaque identifier, so we receive the rest and d
 
 <p><strong>We never receive payment instrument details.</strong> Card numbers and the like are handled
 by the store; we receive only the transaction identifier and the product.</p>
+
+<p><strong>Friendships are made by exchanging codes.</strong> There is no way to search for another
+player by nickname — friend requests only travel between people who have handed each other a code.
+Nothing travels between players who have blocked each other.</p>
 
 <h3>1.2 Processed for advertising</h3>
 <p>While ads are shown in the service, an <strong>advertising identifier</strong> is passed to the ad
@@ -94,8 +100,9 @@ you start them yourself.</strong></p>
 
 <h2>3. Why we use it</h2>
 <ul>
-<li><strong>Running the service</strong> — identifying accounts, matching opponents, calculating
-ratings and rankings, keeping progress and owned items</li>
+<li><strong>Running the service</strong> — identifying accounts, matching opponents,
+<strong>friendships and room invites</strong>, calculating ratings and rankings, keeping progress
+and owned items</li>
 <li><strong>Purchases</strong> — verifying payment, preventing duplicate grants, restoring purchases,
 handling refunds</li>
 <li><strong>Advertising</strong> — showing ads and pacing how often they appear</li>
@@ -111,6 +118,8 @@ handling refunds</li>
 <tr><td>Account, rating, progress, owned items</td><td>Until the account is deleted</td></tr>
 <tr><td>Match replays</td><td><strong>30 days</strong> (kept longer if subject to a report)</td></tr>
 <tr><td>Reports</td><td><strong>1 year</strong></td></tr>
+<tr><td>Friendships, friend requests you sent</td><td>Until you remove the friend or delete the account</td></tr>
+<tr><td><strong>Room invites received</strong></td><td><strong>30 minutes</strong> — the same as a room</td></tr>
 <tr><td>Authentication tokens</td><td>30 days</td></tr>
 <tr><td>Backups</td><td>30 days</td></tr>
 <tr><td>Match results</td><td><strong>Kept in anonymised form</strong> (section 7)</td></tr>
@@ -219,11 +228,11 @@ available.</p>
 <div class="wrap">
 <table>
 <tr><th>Section</th><th>Change</th></tr>
-<tr><td>1.1</td><td>Added linked-account identifier and purchase records</td></tr>
+<tr><td>1.1</td><td>Added linked-account identifier, purchase records and <strong>friendships / room invites</strong></td></tr>
 <tr><td>1.2</td><td><strong>New</strong> — advertising identifier and how to opt out</td></tr>
 <tr><td>1.5</td><td>Removed "advertising identifiers" from what we never collect</td></tr>
-<tr><td>3</td><td>Added purchases and advertising to the purposes</td></tr>
-<tr><td>4</td><td>Added statutory retention periods (5 years, 3 years)</td></tr>
+<tr><td>3</td><td>Added purchases, advertising and <strong>friendships / room invites</strong> to the purposes</td></tr>
+<tr><td>4</td><td>Added statutory retention periods (5 years, 3 years) and <strong>how long friends and invites are kept</strong></td></tr>
 <tr><td>5</td><td>Changed "we do not share" to <strong>passed to Google</strong></td></tr>
 <tr><td>6</td><td>Added Google as a processor · noted processing outside Korea</td></tr>
 <tr><td>7</td><td>Added the statutory exception for purchase records; stated that owned items are lost with no refund</td></tr>
